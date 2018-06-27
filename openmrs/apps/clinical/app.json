@@ -56,6 +56,30 @@
       "preferredIdentifier": "Id_Number"
     },
     "program": {
+       "locationClinicMapping": {
+      "programTitles":[
+        {
+          "location": "CTC",
+          "clinicTitle": "CTC Clinic - Enrollment"
+
+        },
+        {
+          "location": "VCT",
+          "clinicTitle": "TB Clinic - Enrollment"
+
+        }
+      ]},
+      "clinicProgramsMapping": {
+      "programs":[
+        {
+          "program": "HIV Care and Treatment",
+          "clinic":"CTC"
+        },
+        {
+          "program": "NATIONAL TB AND LEPROSY PROGRAM",
+          "clinic":"VCT"
+        }
+      ]},
       "ID_Number": {
         "required": true
       },
