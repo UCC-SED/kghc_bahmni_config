@@ -24,7 +24,7 @@
   ],
   "config": {
     "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
-    "gothomisIntegrationStatus":false,
+    "gothomisIntegrationStatus":true,
     "quickPrints":true,
     "networkConnectivity" : {
       "showNetworkStatusMessage": true,
@@ -63,7 +63,7 @@
 
         },
         {
-          "location": "TB",
+          "location": "VCT",
           "clinicTitle": "TB Clinic - Enrollment"
 
         }
@@ -76,7 +76,7 @@
         },
         {
           "program": "NATIONAL TB AND LEPROSY PROGRAM",
-          "clinic":"TB"
+          "clinic":"VCT"
         }
       ]},
       "ID_Number": {

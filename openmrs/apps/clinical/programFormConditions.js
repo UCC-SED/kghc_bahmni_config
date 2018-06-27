@@ -1,92 +1,35 @@
 Bahmni.Clinical.Program.FormConditions.rules = {
-    'DOT Option': function (patientProgramAttributes) {
+    'Transfer In': function (patientProgramAttributes, patient) {
         var conditions = {
             show: [],
             hide: []
         };
-        if (patientProgramAttributes['DOT Option'] == 'Home-based DOT') {
 
-            conditions.show.push('Name of Treatment Supporter');
-            conditions.show.push('Tel No of Treatment Supporter');
-            conditions.show.push('Physical Address of Treatment Supporter');
-            conditions.show.push('Name of Community Support Organisation');
-        } else if (patientProgramAttributes['DOT Option'] == 'Health Facility DOT') {
-            conditions.hide.push('Name of Treatment Supporter');
-            conditions.hide.push('Tel No of Treatment Supporter');
-            conditions.hide.push('Physical Address of Treatment Supporter');
-            conditions.hide.push('Name of Community Support Organisation');
-        }
-        return conditions;
-    },
-    'Classification by site': function (patientProgramAttributes) {
-        var conditions = {
-            show: [],
-            hide: []
-        };
-      console.log(patientProgramAttributes);
-        if (patientProgramAttributes['Classification by site'] == 'Extra-pulmonary') {
 
-            conditions.show.push('Site');
-        } else
+    if (typeof patient !== "undefined") {
+    
+        if(patient.gender == 'M')
         {
-            conditions.hide.push('Site');
-        }
-        return conditions;
-    },
-
-    'HIV Status': function (patientProgramAttributes) {
-        var conditions = {
-            show: [],
-            hide: []
-        };
-        if (patientProgramAttributes['HIV Status'] == 'Negative') {
-            conditions.hide.push('CPT');
-            conditions.hide.push('CPT Start Date');
-            conditions.hide.push('ART drugs');
-            conditions.hide.push('ART Start Date');
-            conditions.hide.push('HIV Care registration number');
-
-           
-        } else  {
-             conditions.show.push('CPT');
-            conditions.show.push('CPT Start Date');
-            conditions.show.push('ART drugs');
-            conditions.show.push('ART Start Date');
-            conditions.show.push('HIV Care registration number');
-        }
-        return conditions;
-    },
-
-
-    'Place of Work': function (patientProgramAttributes) {
-        var conditions = {
-            show: [],
-            hide: []
-        };
-        
-        if (patientProgramAttributes['Place of Work'] == 'Other') {
-
-            conditions.show.push('Place of Work-Other');
+         conditions.hide.push('Breast Feeding');  
+         conditions.hide.push('Pregnant');  
         }else
         {
-            conditions.hide.push('Place of Work-Other');
+              conditions.show.push('Breast Feeding');
+              conditions.show.push('Pregnant');
         }
-        return conditions;
-    },
-
-  
-    'CLIENT REFFERED FROM': function (patientProgramAttributes) {
-        var conditions = {
-            show: [],
-            hide: []
-        };
-        console.log(patientProgramAttributes['CLIENT REFFERED FROM']);
-        if (patientProgramAttributes['CLIENT REFFERED FROM'] == 'OPD') {
-
-           console.log('NIPOOOO');
-        } else 
-        {
-          console.log('SIPOOOO');
+       }
+        if (patientProgramAttributes['Transfer In'] == 'WITH RECORDS' ||patientProgramAttributes['Transfer In'] == 'NO RECORDS AVAILABLE' || patientProgramAttributes['Transfer In'] == 'IN CARE' || patientProgramAttributes['Transfer In'] == 'ON ART' ) {
+            conditions.show.push('WHO Stage');  
+            conditions.show.push('Prior ARV Exposure');     
+            conditions.show.push('Date Ready to Start ARV');    
+            conditions.show.push('Date Start ARV');     
+            conditions.show.push('CD4 Count');    
+        } else  {
+             conditions.hide.push('WHO Stage');
+              conditions.hide.push('Prior ARV Exposure');
+              conditions.hide.push('Date Ready to Start ARV'); 
+              conditions.hide.push('Date Start ARV');  
+              conditions.hide.push('CD4 Count');   
         }
         return conditions;
     }
