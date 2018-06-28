@@ -25,7 +25,7 @@
   "config": {
     "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
     "enableLabOrderOptions": "Urgent",
-    "gothomisIntegrationStatus":false,
+    "gothomisIntegrationStatus":true,
     "quickPrints":true,
     "networkConnectivity" : {
       "showNetworkStatusMessage": true,
