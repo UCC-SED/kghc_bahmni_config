@@ -38,19 +38,6 @@
     "order": 2,
     "requiredPrivilege": "app:vertical"
     },
-    "bahmniClinicalPatientsSearchActivePatientsForMATPrograms": {
-        "id": "bahmni.clinical.patients.search.activeMATPatients",
-        "extensionPointId": "org.bahmni.patient.search",
-        "type": "config",
-        "extensionParams": {
-            "searchHandler": "emrapi.sqlSearch.activeMATPatients",
-            "translationKey": "MAT Active Patients",
-            "forwardUrl": "#/default/patient/{{patientUuid}}/consultationContext"
-        },
-        "label": "Active",
-        "order": 2,
-        "requiredPrivilege": "app:vertical"
-    },
     "bahmniClinicalPatientsSearchActivePatientsForTBPrograms": {
         "id": "bahmni.clini#cal.patients.search.activeTBPatients",
         "extensionPointId": "org.bahmni.patient.search",
