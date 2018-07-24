@@ -66,6 +66,11 @@
           "location": "TB",
           "clinicTitle": "TB Clinic - Enrollment"
 
+        },
+        {
+          "location": "RCH",
+          "clinicTitle": "RCH Clinic - Enrollment"
+
         }
       ]},
       "clinicProgramsMapping": {
@@ -77,6 +82,14 @@
         {
           "program": "NATIONAL TB AND LEPROSY PROGRAM",
           "clinic":"TB"
+        },
+        {
+          "program": "Antenatal Care",
+          "clinic":"RCH"
+        },
+        {
+          "program": "Under five",
+          "clinic":"RCH"
         }
       ]},
       "ID_Number": {
@@ -108,6 +121,38 @@
             "CD4 Count",
             "Breast Feeding",
             "Pregnant"
+          ]
+        },
+        {
+          "programName": "RCH - Wajawazito",
+          "attributeTypes": [
+            "ID_Number",
+            "Namba ya hati punguzo ya chandarua",
+            "ANC- Jina la mume/mwenza",
+            "ANC - Umri wa mume/mwenza",
+            "ANC - Elimu ya mume/mwenza",
+            "ANC - Kazi ya mume/mwenza",
+            "ANC - Tarehe ya kwanza ya hedhi ya mara ya mwisho (LNMP)"
+          ]
+        },
+         {
+          "programName": "RCH - Watoto",
+          "attributeTypes": [
+            "ID_Number",
+            "RCH1 - Uzito (kilo)",
+            "RCH1 - Mahali alipozaliwa",
+            "RCH1 - Aina ya mhudumu aliyemzalisha"
+          ]
+        },
+          {
+          "programName": "MAT",
+          "attributeTypes": [
+            "ID_Number",
+            "MAT - Idadi ya watoto",
+            "MAT - Makazi",
+            "MAT - Jina",
+            "MAT - Code yake",
+            "MAT - Namba ya simu"
           ]
         }
       ]
