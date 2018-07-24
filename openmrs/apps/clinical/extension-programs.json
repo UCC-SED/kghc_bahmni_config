@@ -25,6 +25,32 @@
         "order": 2,
         "requiredPrivilege": "app:vertical"
     },
+    "bahmniClinicalPatientsSearchActivePatientsForRCHPrograms": {
+    "id": "bahmni.clinical.patients.search.activeRCHPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+        "searchHandler": "emrapi.sqlSearch.activeRCHPatients",
+        "translationKey": "RCH Active Patients",
+        "forwardUrl": "#/default/patient/{{patientUuid}}/consultationContext"
+    },
+    "label": "Active",
+    "order": 2,
+    "requiredPrivilege": "app:vertical"
+    },
+    "bahmniClinicalPatientsSearchActivePatientsForTBPrograms": {
+        "id": "bahmni.clini#cal.patients.search.activeTBPatients",
+        "extensionPointId": "org.bahmni.patient.search",
+        "type": "config",
+        "extensionParams": {
+            "searchHandler": "emrapi.sqlSearch.activeTBPatients",
+            "translationKey": "TB Active Patients",
+            "forwardUrl": "#/default/patient/{{patientUuid}}/consultationContext"
+        },
+        "label": "Active",
+        "order": 2,
+        "requiredPrivilege": "app:vertical"
+    },
     "bahmniClinicalConceptSetGroupObservationsHistory": {
         "id": "bahmni.clinical.conceptSetGroup.observations.history",
         "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
