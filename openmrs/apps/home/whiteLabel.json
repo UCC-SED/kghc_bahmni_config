@@ -1,11 +1,11 @@
 {
   "homePage": {
-    "header_text": "MIREMBE MENTAL HEALTH HOSPITAL",
-    "logo": "/bahmni_config/openmrs/images/TanzaniaLogo.png",
+    "header_text": "<b>WELCOME TO<br />TANZANIA EMR",
+    "logo": "/bahmni_config/openmrs/images/tanzaniaLogoFull.png",
     "title_text": " "
   },
   "loginPage": {
-    "logo": "/bahmni_config/openmrs/images/TanzaniaLogo.png",
+    "logo": "/bahmni_config/openmrs/images/tanzaniaLogoFull.png",
     "showHeaderText": false,
     "showTitleText": false
   },

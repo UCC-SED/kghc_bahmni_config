@@ -1,4 +1,38 @@
 {
+  "OPDDiagnosisPatient": {
+    "name": "OPD Diagnosis",
+    "type": "cohort",
+    "config": {
+      "report": {
+        "type": "labOrders",
+        "config": {
+          "forDataAnalysis": true
+
+        }
+      },
+
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/test.sql",
+
+      "rowGroups": [
+        "indicator"
+      ],
+      "columnGroups": [
+        "Gender"
+      ],
+      "distinctGroups": [
+        "Total",
+        "<1 Year",
+        "1-4 Years",
+        "5-14 Years",
+        "15-19 Years",
+        "20 - 24 Years",
+        "25 - 49 Years",
+        ">= 50 Years"
+      ],
+      "showTotalRow":true,
+      "showTotalColumn":false
+    }
+  },
   "IPDDiagnosisPatient": {
     "name": "IPD Diagnosis",
     "type": "MRSGeneric",
@@ -64,7 +98,7 @@
         "visitTypesToFilter": ["IPD"],
         "excludeColumns": ["Patient Name", "Patient Id", "Visit Id"],
         "additionalPatientIdentifiers": ["National Id"]
-	}
+  }
 },
  "ipdStartedVisit": {
        "name": "IPD VISITS (Started visits Date/Gender)",
@@ -167,76 +201,44 @@
       "showTotalColumn":true
     }
   },
-   "crossReport": {
-    "name": "Quarterly facility based HIV care/ART reporting form",
+   "crosssectionalReport": {
+    "name": "Crosssectional Report",
     "extensionPointId": "org.bahmni.report.ctc",
-    "type": "customDesign",
+    "type": "crosssectional",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/design/cross_sectional.jrxml",
-       "dept":"CTC"
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/cross_sectional.jrxml"
     }
   },
    "cohortReport": {
-    "name": "Cohort Analysis",
+    "name": "Cohort Report",
     "extensionPointId": "org.bahmni.report.ctc",
-    "type": "customDesign",
+    "type": "cohort",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/design/cohortReport.jrxml",
-      "dept":"CTC"
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/cohortReport.jrxml"
     }
   },
     "viralLoadReport": {
     "name": "Viral Load Report",
     "extensionPointId": "org.bahmni.report.ctc",
-    "type": "customDesign",
+    "type": "cohort",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/design/viralLoad.jrxml",
-      "dept":"CTC"
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/viralLoad.jrxml"
     }
   },
     "viralLoadDetailedReport": {
     "name": "Viral Load Detailed Report",
     "extensionPointId": "org.bahmni.report.ctc",
-    "type": "customDesign",
+    "type": "cohort",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/design/viralLoadDetailed.jrxml",
-      "dept":"CTC"
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/viralLoadDetailed.jrxml"
     }
   },
    "pepfarIndicatorReport": {
     "name": "Pepfar Indicator Report",
     "extensionPointId": "org.bahmni.report.ctc",
-    "type": "customDesign",
+    "type": "cohort",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/design/pepfarIndicator.jrxml",
-      "dept":"CTC"
-    }
-  },
-   "tbRegister": {
-    "name": "TB 03 Register",
-    "extensionPointId": "org.bahmni.report.tb",
-    "type": "customDesign",
-    "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/design/tb_unit_register3.jrxml",
-      "dept":"TB"
-    }
-  },
-   "tbNotificationReport": {
-    "name": "TB 07 Quarterly case notification report of tuberculosis and TB/HIV",
-    "extensionPointId": "org.bahmni.report.tb",
-    "type": "customDesign",
-    "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/design/tb07.jrxml",
-      "dept":"TB"
-    }
-  },
-   "tbNotification12Report": {
-    "name": "TB 09 Quarterly report on the results of treatment of tuberculosis and TB/HIV patients notified in the quarter ending 12 months early",
-    "extensionPointId": "org.bahmni.report.tb",
-    "type": "customDesign",
-    "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/design/tb09.jrxml",
-      "dept":"TB"
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/pepfarIndicator.jrxml"
     }
   }
 }

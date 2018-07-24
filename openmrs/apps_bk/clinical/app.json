@@ -24,7 +24,8 @@
   ],
   "config": {
     "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
-    "gothomisIntegrationStatus":false,
+    "enableLabOrderOptions": "Urgent",
+    "gothomisIntegrationStatus":true,
     "quickPrints":true,
     "networkConnectivity" : {
       "showNetworkStatusMessage": true,
@@ -63,7 +64,7 @@
 
         },
         {
-          "location": "TB",
+          "location": "VCT",
           "clinicTitle": "TB Clinic - Enrollment"
 
         }
@@ -76,7 +77,7 @@
         },
         {
           "program": "NATIONAL TB AND LEPROSY PROGRAM",
-          "clinic":"TB"
+          "clinic":"VCT"
         }
       ]},
       "ID_Number": {
@@ -109,6 +110,38 @@
             "Breast Feeding",
             "Pregnant"
           ]
+        },
+        {
+          "programName": "RCH - Wajawazito",
+          "attributeTypes": [
+            "ID_Number",
+            "Namba ya hati punguzo ya chandarua",
+            "ANC- Jina la mume/mwenza",
+            "ANC - Umri wa mume/mwenza",
+            "ANC - Elimu ya mume/mwenza",
+            "ANC - Kazi ya mume/mwenza",
+            "ANC - Tarehe ya kwanza ya hedhi ya mara ya mwisho (LNMP)"
+          ]
+        },
+        {
+          "programName": "RCH - Watoto",
+          "attributeTypes": [
+            "ID_Number",
+            "RCH1 - Uzito (kilo)",
+            "RCH1 - Mahali alipozaliwa",
+            "RCH1 - Aina ya mhudumu aliyemzalisha"
+          ]
+        },
+        {
+          "programName": "MAT",
+          "attributeTypes": [
+            "ID_Number",
+            "MAT - Idadi ya watoto",
+            "MAT - Makazi",
+            "MAT - Jina",
+            "MAT - Code yake",
+            "MAT - Namba ya simu"
+          ]
         }
       ]
     },
@@ -126,6 +159,12 @@
     "visitTypeForRetrospectiveEntries": "Special OPD",
     "maxConceptSetLevels": 3,
     "allowOnlyCodedDiagnosis": false,
+    "conceptResultMap": {
+      "Family and social history": {
+    "mapTo": "HEIGHT",
+    "dataType": "obs"
+    }
+  },
     "conceptSetUI": {
       "Discussion Topics for Continues Health Education to CTC Client":{
         "allowAddMore": true
@@ -141,8 +180,15 @@
         "allowAddMore": true
       },
       "IPD OBS CHART": {
-		"allowAddMore": true  
-	  },
+    "allowAddMore": true  
+    },
+    
+    "PROGRESS NOTES": {
+    "allowAddMore": true
+    },
+    
+    
+    
       "All Observation Templates": {
         "showPanelView": true
       },
@@ -437,9 +483,21 @@
           ]
         },
         {
-          "visitType": "RCH",
+          "visitType": "RCH 4",
           "defaultObservationConceptName": [
-            "All RCH Observations"
+            "All RCH4 - Wajawazito Observations"
+          ]
+        },
+        {
+          "visitType": "RCH 1",
+          "defaultObservationConceptName": [
+            "All RCH1 - Watoto Observations"
+          ]
+        },
+        {
+          "visitType": "MAT",
+          "defaultObservationConceptName": [
+            "All MAT Observations"
           ]
         }
       ]

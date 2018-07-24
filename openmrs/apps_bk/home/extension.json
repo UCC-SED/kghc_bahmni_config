@@ -17,7 +17,7 @@
     "url": "../clinical/#/programs/patient/search",
     "icon": "icon-bahmni-program",
     "order": 7,
-    "requiredPrivilege": "app:vertical"
+    "requiredPrivilege": "app:programs"
   },
   "clinical": {
     "id": "bahmni.clinical",
@@ -137,7 +137,7 @@
     "url": "../clinical/#/default/patient/search",
     "icon": "fa-inr",
     "order": 5,
-    "requiredPrivilege": "app:billing"
+    "requiredPrivilege": "app:prescription"
   },
   "vct": {
     "id": "bahmni.nurse.vct",

@@ -16,12 +16,6 @@
 
         },
         {
-          "location": "TB",
-          "clinicName": "TB Clinic",
-          "app": "program"
-
-        },
-        {
           "location": "DNT",
           "clinicName": "Dental Clinic",
           "app": "clinic"
@@ -34,12 +28,18 @@
 
         },
         {
+          "location": "TB",
+          "clinicName": "TB Clinic",
+          "app": "program"
+
+        },
+        {
           "location": "RCH",
           "clinicName": "RCH Clinic",
           "app": "program"
 
         },
-        {
+         {
           "location": "MAT",
           "clinicName": "MAT Clinic",
           "app": "program"

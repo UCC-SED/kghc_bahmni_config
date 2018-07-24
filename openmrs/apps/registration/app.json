@@ -23,24 +23,6 @@
         "forwardUrl": "../nurse/#/patient/{{patientUuid}}/fillform/All VCT Observation",
         "translationKey": "Save & Start VCT Counselling",
         "shortcutKey": "c"
-      },
-      {
-        "visitType": "RCH 4",
-        "forwardUrl": "../nurse/#/patient/{{patientUuid}}/fillform/All RCH4 - Wajawazito Observations",
-        "translationKey": "Save & Exit",
-        "shortcutKey": "r"
-      },
-      {
-        "visitType": "RCH 1",
-        "forwardUrl": "../nurse/#/patient/{{patientUuid}}/fillform/All RCH1 - Watoto Observations",
-        "translationKey": "Save & Exit",
-        "shortcutKey": "r"
-      },
-      {
-        "visitType": "MAT",
-        "forwardUrl": "../nurse/#/patient/{{patientUuid}}/fillform/All MAT Observation",
-        "translationKey": "Save & Start MAT Visit",
-        "shortcutKey": "c"
       }
     ],
     "patientInformation": {
@@ -64,11 +46,7 @@
         "attributes": [
           "Name",
           "Next of Kin Contact Number",
-          "Next of Kin Type",
-		  "Second Next of kin Name",
-		  "Second Next of kin Contact Number",
-		  "Second Next of Kin Type"
-
+          "Next of Kin Type"
         ]
       },
       "nationalIdentification": {
@@ -83,7 +61,7 @@
         "title": "Criminal Case Information",
         "translationKey": "Criminal Case Information",
         "attributes": [
-          "CRIMINAL CASE NO.",
+          "CRIMINAL CASE NO",
           "Category",
           "Reefering Court",
           "Date",
@@ -91,8 +69,8 @@
         ]
       },
       "refferalInformation": {
-        "title": "Referral Information",
-        "translationKey": "Referral Information",
+        "title": "Referrall Information",
+        "translationKey": "Referrall Information",
         "attributes": [
           "Referred From",
           "Referred Date",
@@ -131,7 +109,7 @@
     "hideRelationShipDuration": true,
     "showTribeName": true,
     "showCasteSameAsLastNameCheckbox": false,
-    "patientAttendanceMode": "provider",
+    "patientAttendanceMode": "room",
     "assumedBirthDay": "01/07",
     "printOptions": [
       {
