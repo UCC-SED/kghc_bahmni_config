@@ -86,10 +86,6 @@
         {
           "program": "Antenatal Care",
           "clinic":"RCH"
-        },
-        {
-          "program": "Under five",
-          "clinic":"RCH"
         }
       ]},
       "ID_Number": {
@@ -153,6 +149,30 @@
             "MAT - Jina",
             "MAT - Code yake",
             "MAT - Namba ya simu"
+          ]
+        },
+        {
+          "programName": "NATIONAL TB AND LEPROSY PROGRAM",
+          "attributeTypes": [
+            "District Registration Number",
+            "Place of Work",
+            "Place of Work-Other",
+            "Reffered by",
+            "Reffered by-Other",
+            "DOT Option",
+            "Name of Treatment Supporter",
+            "Tel No of Treatment Supporter",
+            "Physical Address of Treatment Supporter",
+            "Name of Community Support Organisation",
+            "Classification by site",
+            "Site",
+            "Classification by History of Treatment",
+            "HIV Status",
+            "HIV Care registration number",
+            "CPT",
+            "CPT Start Date",
+            "ART drugs",
+            "ART Start Date"
           ]
         }
       ]
