@@ -32,7 +32,7 @@ Bahmni.Clinical.Program.FormConditions.rules = {
 
         return conditions;
 },
-  'DOT Option': function (patientProgramAttributes) {
+  'DOT Option': function (patientProgramAttributes, patient) {
         var conditions = {
             show: [],
             hide: []
@@ -48,10 +48,16 @@ Bahmni.Clinical.Program.FormConditions.rules = {
             conditions.hide.push('Tel No of Treatment Supporter');
             conditions.hide.push('Physical Address of Treatment Supporter');
             conditions.hide.push('Name of Community Support Organisation');
+        }else
+        {
+            conditions.hide.push('Name of Treatment Supporter');
+            conditions.hide.push('Tel No of Treatment Supporter');
+            conditions.hide.push('Physical Address of Treatment Supporter');
+            conditions.hide.push('Name of Community Support Organisation');  
         }
         return conditions;
     },
-    'Classification by site': function (patientProgramAttributes) {
+    'Classification by site': function (patientProgramAttributes, patient) {
         var conditions = {
             show: [],
             hide: []
@@ -67,31 +73,34 @@ Bahmni.Clinical.Program.FormConditions.rules = {
         return conditions;
     },
 
-    'HIV Status': function (patientProgramAttributes) {
+    'HIV Status': function (patientProgramAttributes, patient) {
         var conditions = {
             show: [],
             hide: []
         };
-        if (patientProgramAttributes['HIV Status'] == 'Negative') {
+        console.log(patientProgramAttributes['HIV Status'] );
+        if (patientProgramAttributes['HIV Status'] == 'Positive') {
+            
+           conditions.show.push('CPT');
+            conditions.show.push('CPT Start Date');
+            conditions.show.push('ART drugs');
+            conditions.show.push('ART Start Date');
+            conditions.show.push('HIV Care registration number');
+
+        } else  {
+  
+
             conditions.hide.push('CPT');
             conditions.hide.push('CPT Start Date');
             conditions.hide.push('ART drugs');
             conditions.hide.push('ART Start Date');
             conditions.hide.push('HIV Care registration number');
-
-
-        } else  {
-             conditions.show.push('CPT');
-            conditions.show.push('CPT Start Date');
-            conditions.show.push('ART drugs');
-            conditions.show.push('ART Start Date');
-            conditions.show.push('HIV Care registration number');
         }
         return conditions;
     },
 
 
-    'Place of Work': function (patientProgramAttributes) {
+    'Place of Work': function (patientProgramAttributes, patient) {
         var conditions = {
             show: [],
             hide: []
@@ -106,20 +115,18 @@ Bahmni.Clinical.Program.FormConditions.rules = {
         }
         return conditions;
     },
-
-
-    'CLIENT REFFERED FROM': function (patientProgramAttributes) {
+ 'Reffered by': function (patientProgramAttributes, patient) {
         var conditions = {
             show: [],
             hide: []
         };
-        console.log(patientProgramAttributes['CLIENT REFFERED FROM']);
-        if (patientProgramAttributes['CLIENT REFFERED FROM'] == 'OPD') {
 
-           console.log('NIPOOOO');
-        } else
+        if (patientProgramAttributes['Reffered by'] == 'Other') {
+
+            conditions.show.push('Reffered by-Other');
+        }else
         {
-          console.log('SIPOOOO');
+            conditions.hide.push('Reffered by-Other');
         }
         return conditions;
     }};
