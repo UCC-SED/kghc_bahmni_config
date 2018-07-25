@@ -506,15 +506,21 @@
           ]
         },
         {
-          "visitType": "RCH Wajawazito",
+          "visitType": "RCH ANC",
           "defaultObservationConceptName": [
-            "All RCH Observations"
+            "All ANC Observations"
           ]
         },
          {
-          "visitType": "RCH Watoto",
+          "visitType": "RCH PNC",
           "defaultObservationConceptName": [
-            "All RCH Observations"
+            "All PNC Observations"
+          ]
+        },
+         {
+          "visitType": "RCH Under Five",
+          "defaultObservationConceptName": [
+            "All Under Five Observations"
           ]
         }
       ]
