@@ -126,7 +126,7 @@
         {
           "programName": "RCH - Wajawazito",
           "attributeTypes": [
-            "ID_Number",
+            "ANC number",
             "Namba ya hati punguzo ya chandarua",
             "ANC- Jina la mume/mwenza",
             "ANC - Umri wa mume/mwenza",
@@ -138,7 +138,7 @@
          {
           "programName": "RCH - Watoto",
           "attributeTypes": [
-            "ID_Number",
+            "Under Five Number",
             "RCH1 - Uzito (kilo)",
             "RCH1 - Mahali alipozaliwa",
             "RCH1 - Aina ya mhudumu aliyemzalisha"
@@ -506,7 +506,13 @@
           ]
         },
         {
-          "visitType": "RCH",
+          "visitType": "RCH - Wajawazito",
+          "defaultObservationConceptName": [
+            "All RCH Observations"
+          ]
+        },
+         {
+          "visitType": "RCH - Watoto",
           "defaultObservationConceptName": [
             "All RCH Observations"
           ]
