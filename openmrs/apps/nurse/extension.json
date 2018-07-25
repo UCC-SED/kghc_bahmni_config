@@ -24,7 +24,8 @@
 			"display":"Active Patients",
 			"translationKey": "MODULE_LABEL_ACTIVE_PATIENT_SOCIAL_WORKER_KEY",
 			"forwardUrl" : "../nurse/#/patient/{{patientUuid}}/fillform/All Social Worker Observation",
-			"forwardButtonTitle" : "View"
+			"forwardButtonTitle" : "View",
+			    "view":"tabular"
 		},
 		"label": "Active Patient",
 		"order": 1,
@@ -39,7 +40,8 @@
 			"display":"Active Patients",
 			"translationKey": "MODULE_LABEL_ACTIVE_PATIENT_VCT_KEY",
 			"forwardUrl" : "../nurse/#/patient/{{patientUuid}}/fillform/All VCT Observation",
-			"forwardButtonTitle" : "View"
+			"forwardButtonTitle" : "View",
+			 "view":"tabular"
 		},
 		"label": "Active Patient",
 		"order": 1,
@@ -54,7 +56,8 @@
 			"display":"Active Patients",
 			"translationKey": "MODULE_LABEL_ACTIVE_PATIENT_COUNSELOR_KEY",
 			"forwardUrl" : "../nurse/#/patient/{{patientUuid}}/fillform/All Counselor Observation",
-			"forwardButtonTitle" : "View"
+			"forwardButtonTitle" : "View",
+			 "view":"tabular"
 		},
 		"label": "Active Patient",
 		"order": 1,
@@ -69,7 +72,8 @@
 			"display":"Active Patients",
 			"translationKey": "MODULE_LABEL_ACTIVE_PATIENT_THERAPY_KEY",
 			"forwardUrl" : "../nurse/#/patient/{{patientUuid}}/fillform/All Therapy Observation",
-			"forwardButtonTitle" : "View"
+			"forwardButtonTitle" : "View",
+			    "view":"tabular"
 		},
 		"label": "Active Patient",
 		"order": 1,
