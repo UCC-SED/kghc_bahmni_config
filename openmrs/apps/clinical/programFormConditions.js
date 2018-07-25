@@ -7,8 +7,8 @@ Bahmni.Clinical.Program.FormConditions.rules = {
      if (typeof patient !== "undefined") {
         if(patient.gender == 'M')
           {
-         conditions.hide.push('Breast Feeding');
-         conditions.hide.push('Pregnant');
+         conditions.hide.push('Breast Feeding');  
+         conditions.hide.push('Pregnant');  
         }else
         {
               conditions.show.push('Breast Feeding');
@@ -17,17 +17,17 @@ Bahmni.Clinical.Program.FormConditions.rules = {
       }
 
         if (patientProgramAttributes['Transfer In'] == 'WITH RECORDS' ||patientProgramAttributes['Transfer In'] == 'NO RECORDS AVAILABLE' || patientProgramAttributes['Transfer In'] == 'IN CARE' || patientProgramAttributes['Transfer In'] == 'ON ART' ) {
-            conditions.show.push('WHO Stage');
-            conditions.show.push('Prior ARV Exposure');
-            conditions.show.push('Date Ready to Start ARV');
-            conditions.show.push('Date Start ARV');
-            conditions.show.push('CD4 Count');
+            conditions.show.push('WHO Stage');  
+            conditions.show.push('Prior ARV Exposure');     
+            conditions.show.push('Date Ready to Start ARV');    
+            conditions.show.push('Date Start ARV');     
+            conditions.show.push('CD4 Count');    
         } else  {
              conditions.hide.push('WHO Stage');
               conditions.hide.push('Prior ARV Exposure');
-              conditions.hide.push('Date Ready to Start ARV');
-              conditions.hide.push('Date Start ARV');
-              conditions.hide.push('CD4 Count');
+              conditions.hide.push('Date Ready to Start ARV'); 
+              conditions.hide.push('Date Start ARV');  
+              conditions.hide.push('CD4 Count');   
              }
 
         return conditions;
