@@ -84,7 +84,11 @@
           "clinic":"TB"
         },
         {
-          "program": "Antenatal Care",
+          "program": "RCH - Watoto",
+          "clinic":"RCH"
+        },
+        {
+          "program": "RCH - Wajawazito",
           "clinic":"RCH"
         }
       ]},
