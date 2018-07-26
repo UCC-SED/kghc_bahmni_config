@@ -66,13 +66,6 @@
               "numberOfVisits":10
             }
           },
-            "allPackOrders": {
-                "title": "pacs",
-                "type": "pacs",
-                "hideEmptyDisplayControl": false,
-                "displayByDefault":true,
-                "displayOrder":10
-            },
             "diagnosis": {
                 "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
                 "type": "diagnosis",
