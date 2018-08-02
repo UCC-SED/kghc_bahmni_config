@@ -21,10 +21,12 @@
         "Member":{
           "allowAddMore": true
         },
+        "HTC - Rufaa ya Kwenda" : {
+        "multiSelect" : true
+      },
        "HTC - Rufaa ya Kwenda":
       {
-        "dropdown":true,
-          "multiSelect" : true
+        "dropdown":true
       },
        "HTC - Hali ya Ujauzito":
       {
