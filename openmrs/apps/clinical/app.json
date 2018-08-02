@@ -245,6 +245,9 @@
         "multiSelect" : true,
         "autocomplete" : true
       },
+      "HTC - Rufaa ya Kwenda" : {
+        "multiSelect" : true
+      },
       "Signs and Symptoms and OIs":{
         "multiSelect" : true
       },
