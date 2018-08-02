@@ -36,12 +36,12 @@
                     "numberOfVisits": 2
                 }
             },
-                        "formsDisplay": {
+          "formsDisplay": {
                 "type": "forms",
-                "displayOrder": 21,
+                "displayOrder": 2,
                 "dashboardConfig": {
                     "title": null,
-                    "maximumNoOfVisits": 10
+                    "maximumNoOfVisits": 1
                 },
                 "formGroup": [ ],
                 "translationKey": "DASHBOARD_TITLE_FORMS_DISPLAY_CONTROL_KEY"
