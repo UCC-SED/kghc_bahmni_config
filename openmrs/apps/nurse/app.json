@@ -24,10 +24,6 @@
         "HTC - Rufaa ya Kwenda" : {
         "multiSelect" : true
       },
-       "HTC - Rufaa ya Kwenda":
-      {
-        "dropdown":true
-      },
        "HTC - Hali ya Ujauzito":
       {
         "dropdown":true
