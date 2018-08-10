@@ -80,6 +80,10 @@
           "clinic":"CTC"
         },
         {
+          "program": "HIV Exposed Infant",
+          "clinic":"CTC"
+        },
+        {
           "program": "NATIONAL TB AND LEPROSY PROGRAM",
           "clinic":"TB"
         },
@@ -177,6 +181,18 @@
             "CPT Start Date",
             "ART drugs",
             "ART Start Date"
+          ]
+        },
+        {
+          "programName": "HIV Exposed Infant",
+          "attributeTypes": [
+            "ID_Number",
+            "Name of Mother",
+            "ANC No of Mother",
+            "Infact NVP at Birth",
+            "ARV Drugs Taken by Mother During L&D",
+            "Number of Days Dispensed",
+            "Infact Feeding Practice Birth"
           ]
         }
       ]
