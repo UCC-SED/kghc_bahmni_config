@@ -113,6 +113,14 @@
         {
           "program": "RCH - Wajawazito",
           "clinic":"Antenatal"
+        },
+        {
+          "program": "RCH - Watoto",
+          "clinic":"RCH"
+        },
+        {
+          "program": "RCH - Wajawazito",
+          "clinic":"RCH"
         }
       ]},
       "ID_Number": {
