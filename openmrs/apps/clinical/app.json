@@ -71,6 +71,21 @@
           "location": "RCH",
           "clinicTitle": "RCH Clinic - Enrollment"
 
+        },
+        {
+          "location": "Antenatal",
+          "clinicTitle": "Antenatal Clinic - Enrollment"
+
+        },
+        {
+          "location": "Post Natal",
+          "clinicTitle": "Post Natal Clinic - Enrollment"
+
+        },
+        {
+          "location": "Child Care",
+          "clinicTitle": "Child Care Clinic - Enrollment"
+
         }
       ]},
       "clinicProgramsMapping": {
@@ -89,11 +104,15 @@
         },
         {
           "program": "RCH - Watoto",
-          "clinic":"RCH"
+          "clinic":"Post Natal"
+        },
+        {
+          "program": "RCH - Watoto",
+          "clinic":"Child Care"
         },
         {
           "program": "RCH - Wajawazito",
-          "clinic":"RCH"
+          "clinic":"Antenatal"
         }
       ]},
       "ID_Number": {
@@ -136,7 +155,32 @@
             "ANC - Umri wa mume/mwenza",
             "ANC - Elimu ya mume/mwenza",
             "ANC - Kazi ya mume/mwenza",
-            "ANC - Tarehe ya kwanza ya hedhi ya mara ya mwisho (LNMP)"
+            "MIMBA YA NGAPI",
+            "AMEZAA MARA NGAPI",
+            "WATOTO WALIO HAI",
+            "ANC - Tarehe ya kwanza ya hedhi ya mara ya mwisho (LNMP)",
+            "TAREHE ANAYOTAZAMIWA KUJIFUNGUA (EDD)",
+            "UMRI CHIN YA MIAKA 20",
+            "MIAKA KUMI AU ZAIDI TOKEA MIMBA YA MWISHO",
+            "KUJIFUNGUA KWA KUPASULIWA",
+            "KUZAA MTOTO MFU/KIFO CHA MTOTO MCHANGA (Wk 1)",
+            "KUHARIBIKA KWA MIMBA MBILI AU ZAIDI",
+            "UGONJWA WA MOYO",
+            "KISUKARI",
+            "KIFUA KIKUU",
+            "MIMBA YA 5 AU ZAIDI",
+            "KIMO CHINI YA CM 150",
+            "KILEMA CHA NYONGA",
+            "MIMBA YA KWANZA ZAIDI YA MIAKA 35",
+            "KUZALISHWA KWA UPASUAJI AU VACUM",
+            "KUTOKA NA DAMU NYINGI BAADA YA KUJIFUNGUA",
+            "KONDO LA NYUMA KUKWAMA",
+            "DAMU GROUP",
+            "DAMU Rh",
+            "SYPHILIS SERO STATUS",
+            "mRDT",
+            "PMTCT"
+
           ]
         },
          {
@@ -186,7 +230,7 @@
         {
           "programName": "HIV Exposed Infant",
           "attributeTypes": [
-            "ID_Number",
+            "HIE Number",
             "Name of Mother",
             "ANC No of Mother",
             "Infact NVP at Birth",
@@ -540,6 +584,12 @@
           "visitType": "RCH Under Five",
           "defaultObservationConceptName": [
             "All Under Five Observations"
+          ]
+        },
+         {
+          "visitType": "RCH - Family Planning",
+          "defaultObservationConceptName": [
+            "All Family Planning Observations"
           ]
         }
       ]

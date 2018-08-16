@@ -44,6 +44,36 @@
           "clinicName": "MAT Clinic",
           "app": "program"
 
+        },
+         {
+          "location": "Antenatal",
+          "clinicName": "Antenatal Clinic",
+          "app": "program"
+
+        },
+         {
+          "location": "Child Care",
+          "clinicName": "Under Five Clinic",
+          "app": "program"
+
+        },
+         {
+          "location": "Post Natal",
+          "clinicName": "Post Natal Clinic",
+          "app": "program"
+
+        },
+         {
+          "location": "Family Planning",
+          "clinicName": "Post Natal Clinic",
+          "app": "program"
+
+        },
+         {
+          "location": "Family Planning",
+          "clinicName": "Family Planning Clinic",
+          "app": "clinic"
+
         }
       ]
     }

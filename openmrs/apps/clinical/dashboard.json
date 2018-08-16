@@ -43,7 +43,13 @@
                     "title": null,
                     "maximumNoOfVisits": 1
                 },
-                "formGroup": [ ],
+                "formGroup": ["ANC - Rekodi ya mahudhurio ya wajawazito.",
+                 "ANC - Habari kuhusu uzazi uliotangulia.",
+                 "ANC - Rekodi ya graph ya uchungu","ANC - Rekodi ya mahudhurio baada ya kujifungua hadi wiki 6",
+                 "RCH1 - Visit form - Ufuatiliaji wa mtoto mchanga siku 0-42",
+                 "RCH - FAMILY PLANNING",
+                 "Vitals", "CTC2 Patient Record Form",
+                 "RCH - HIV Exposed Infant Card"],
                 "translationKey": "DASHBOARD_TITLE_FORMS_DISPLAY_CONTROL_KEY"
             },
               

@@ -129,4 +129,37 @@ Bahmni.Clinical.Program.FormConditions.rules = {
             conditions.hide.push('Reffered by-Other');
         }
         return conditions;
-    }};
+    },
+ 'ANC number': function (patientProgramAttributes, patient) {
+        var conditions = {
+            show: [],
+            hide: []
+        };
+
+         if (typeof patient !== "undefined") {
+        if(patient.gender == 'M')
+          {
+            conditions.hide.push('HIE Number');
+            conditions.hide.push('Name of Mother');
+            conditions.hide.push('ANC No of Mother');
+            conditions.hide.push('Infact NVP at Birth');
+            conditions.hide.push('ARV Drugs Taken by Mother During L&D');
+            conditions.hide.push('Number of Days Dispensed');
+            conditions.hide.push('Infact Feeding Practice Birth');
+          }else
+          {
+           conditions.show.push('HIE Number');
+            conditions.show.push('Name of Mother');
+            conditions.show.push('ANC No of Mother');
+            conditions.show.push('Infact NVP at Birth');
+            conditions.show.push('ARV Drugs Taken by Mother During L&D');
+            conditions.show.push('Number of Days Dispensed');
+            conditions.show.push('Infact Feeding Practice Birth');
+
+          }
+       
+    }
+
+     return conditions;
+}
+};
