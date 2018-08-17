@@ -74,6 +74,12 @@
           "clinicName": "Family Planning Clinic",
           "app": "clinic"
 
+        },
+         {
+          "location": "Labour",
+          "clinicName": "Labour Clinic",
+          "app": "clinic"
+
         }
       ]
     }
