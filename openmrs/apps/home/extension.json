@@ -33,8 +33,9 @@
     "id": "bahmni.adt",
     "extensionPointId": "org.bahmni.home.dashboard",
     "type": "link",
-    "translationKey": "MODULE_LABEL_INPATIENT_KEY",
+    "url": "http://192.168.1.2:7070/#!/nursing_care?directStatus=true&stateName=nursing_care",
     "url": "../adt/",
+     "translationKey": "MODULE_LABEL_NURSE_CARE",
     "icon": "icon-bahmni-inpatient",
     "order": 8,
     "requiredPrivilege": "app:adt"

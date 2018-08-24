@@ -27,7 +27,7 @@
     "gothomisIntegrationStatus":true,
     "quickPrints":true,
     "networkConnectivity" : {
-      "showNetworkStatusMessage": true,
+      "showNetworkStatusMessage": false,
       "networkStatusCheckInterval": 5000,
       "locales" : [
         { "locale" : "fr", "css" : "offline-language-french"},
@@ -517,6 +517,10 @@
       {
         "allowAddMore": true
       },
+      "Patograph":
+      {
+        "allowAddMore": true
+      },
       "Billing" : {
         "required": true
       },
@@ -598,6 +602,12 @@
           "visitType": "RCH - Family Planning",
           "defaultObservationConceptName": [
             "All Family Planning Observations"
+          ]
+        },
+         {
+          "visitType": "RCH - Labour",
+          "defaultObservationConceptName": [
+            "All Labour Observations"
           ]
         }
       ]

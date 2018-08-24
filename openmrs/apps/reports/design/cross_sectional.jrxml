@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2018-06-12T15:50:21 -->
+<!-- 2018-08-24T17:45:10 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cross_sectional01" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" whenResourceMissingType="Error" uuid="868819c0-2e1e-457b-84c5-82067f527855">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
@@ -211,8 +211,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ARVStatus = 'Start ARV'
-            AND visitStartDate < $P{start_date}
+        ARVStatus = 'CTC - ARV Status, Start ARV'
+            AND visitStartDate < $P{start_date} 
 			) AS tperiod 
 			
 UNION ALL SELECT 
@@ -295,8 +295,8 @@ FROM
     JOIN ctc_reg_card crc ON crc.CTCID = cvf.CTCID
         AND crc.TransferIn IS NULL
     WHERE
-        cvf.ARVStatus = 'Start ARV'
-            AND cvf.visitStartDate >= $P{start_date}
+        cvf.ARVStatus = 'CTC - ARV Status, Start ARV'
+            AND cvf.visitStartDate >= $P{start_date} 
             AND cvf.visitStartDate <= $P{end_date}
 			) AS tperiod 
 			
@@ -379,8 +379,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ARVStatus = 'Start ARV'
-            AND visitStartDate < '#endDate#') AS tperiod 
+        ARVStatus = 'CTC - ARV Status, Start ARV'
+            AND visitStartDate < $P{end_date}) AS tperiod 
 			
 UNION ALL SELECT 
     'Number of persons on ART and already enrolled in the program who transferred into facility during the reporting period' AS 'indicator',
@@ -461,7 +461,7 @@ FROM
         ctc_reg_card
     WHERE
         TransferIn IS NOT NULL
-            AND EnrollmentDate >= $P{start_date}
+            AND EnrollmentDate >= $P{start_date} 
             AND EnrollmentDate <= $P{end_date}
 			) AS tperiod 
 UNION ALL SELECT 
@@ -542,8 +542,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ARVStatus IN ('Start ARV' , 'Continue ARV', 'Restart')
-            AND visitStartDate >= $P{start_date}
+        ARVStatus IN ('CTC - ARV Status, Start ARV' , 'CTC - ARV Status, Continue ARV', 'CTC - ARV Status, Restart')
+            AND visitStartDate >= $P{start_date} 
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
 			
@@ -625,8 +625,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ARVStatus IN ('Start ARV' , 'Continue ARV', 'Restart')
-            AND visitStartDate >= $P{start_date}
+        ARVStatus IN ('CTC - ARV Status, Start ARV' , 'CTC - ARV Status, Continue ARV', 'CTC - ARV Status, Restart')
+            AND visitStartDate >= $P{start_date} 
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
 			
@@ -709,8 +709,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ARVStatus IN ('Start ARV' , 'Continue ARV', 'Restart')
-            AND visitStartDate >= $P{start_date}
+        ARVStatus IN ('CTC - ARV Status, Start ARV' , 'CTC - ARV Status, Continue ARV', 'CTC - ARV Status, Restart')
+            AND visitStartDate >= $P{start_date} 
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
 	
@@ -792,8 +792,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ARVStatus IN ('Start ARV' , 'Continue ARV', 'Restart')
-            AND visitStartDate >= $P{start_date}
+        ARVStatus IN ('CTC - ARV Status, Start ARV' , 'CTC - ARV Status, Continue ARV', 'CTC - ARV Status, Restart')
+            AND visitStartDate >= $P{start_date} 
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
 			
@@ -876,8 +876,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ARVStatus IN ('Start ARV' , 'Continue ARV', 'Restart')
-            AND visitStartDate >= $P{start_date}
+        ARVStatus IN ('CTC - ARV Status, Start ARV' , 'CTC - ARV Status, Continue ARV', 'CTC - ARV Status, Restart')
+            AND visitStartDate >= $P{start_date} 
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
 			
@@ -960,8 +960,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ViralLoad < 1000
-            AND visitStartDate >= $P{start_date}
+        ViralLoadResult < 1000
+            AND visitStartDate >= $P{start_date} 
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
 
@@ -1043,8 +1043,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ViralLoad < 50
-            AND visitStartDate >= $P{start_date}
+        ViralLoadResult < 50
+            AND visitStartDate >= $P{start_date} 
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
 
@@ -1126,8 +1126,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        ViralLoad >= 1000
-            AND visitStartDate >= $P{start_date}
+        ViralLoadResult >= 1000
+            AND visitStartDate >= $P{start_date} 
             AND visitStartDate <= $P{end_date}
 			) AS tperiod]]>
 		</queryString>
@@ -1244,7 +1244,7 @@ FROM
     FROM
         ctc_reg_card
     WHERE
-        EnrollmentDate < $P{start_date}  ) AS tperiod 
+        EnrollmentDate <  $P{start_date}  ) AS tperiod 
         
         UNION ALL
 
@@ -1328,8 +1328,8 @@ FROM
         ctc_reg_card
     WHERE
         TransferIn IS NULL
-            AND EnrollmentDate >= $P{start_date}
-            AND EnrollmentDate <= $P{end_date}
+            AND EnrollmentDate >=  $P{start_date}
+            AND EnrollmentDate <=  $P{end_date}
 			) AS tperiod 
 			
 		
@@ -1413,8 +1413,8 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        visitStartDate >= $P{start_date}
-            AND visitStartDate <= $P{end_date}
+        visitStartDate >=  $P{start_date}
+            AND visitStartDate <=  $P{end_date}
 			) AS tperiod 
 			
 			
@@ -1497,9 +1497,9 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        OIMedicine = 'Cotrimoxazole'
-            AND visitStartDate >= $P{start_date}
-            AND visitStartDate <= $P{end_date}
+        OIMedicine = 'Cotrimoxazole Tabs'
+            AND visitStartDate >=  $P{start_date}
+            AND visitStartDate <=  $P{end_date}
 			) AS tperiod 
 			
 			
@@ -1583,8 +1583,8 @@ FROM
     WHERE
         TBScreening IS NOT NULL
             AND TBScreening != 'NS = Not Screened'
-            AND visitStartDate >= $P{start_date}
-            AND visitStartDate <= $P{end_date}
+            AND visitStartDate >=  $P{start_date}
+            AND visitStartDate <=  $P{end_date}
 			) AS tperiod 
 			
 			
@@ -1672,9 +1672,9 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        TBRxStatus = 'Start TB - Start TB Rx'
-            AND visitStartDate >= $P{start_date}
-            AND visitStartDate <= $P{end_date}
+        TBRxStatus = 'CTC - Start TB - Start TB Rx'
+            AND visitStartDate >=  $P{start_date}
+            AND visitStartDate <=  $P{end_date}
 			) AS tperiod 
 			
 
@@ -1756,9 +1756,9 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        IPTStatus = 'Start IPT - Start IPT Rx'
-            AND visitStartDate >= $P{start_date}
-            AND visitStartDate <= $P{end_date}
+        IPTStatus = 'CTC - Start IPT - Start IPT Rx'
+            AND visitStartDate >=  $P{start_date}
+            AND visitStartDate <=  $P{end_date}
 			) AS tperiod 
 			
 			
@@ -1840,9 +1840,10 @@ FROM
     FROM
         openmrs.ctc_visit_form
     WHERE
-        NutritionStatus IN ('MOD - Moderate Malnourished' , 'MOD - Severely Malnourished', 'OB - Obesity')
-            AND visitStartDate >= $P{start_date}
-            AND visitStartDate <= $P{end_date}
+        NutritionStatus IN ('CTC - Nutritional Status, MOD - Moderate Malnourished' , 
+        'CTC - Nutritional Status, MOD - Severely Malnourished', 'CTC - Nutritional Status, OB - Obesity')
+            AND visitStartDate >=  $P{start_date}
+            AND visitStartDate <=  $P{end_date}
 			) AS tperiod 
 UNION ALL
 SELECT 
@@ -1928,8 +1929,8 @@ FROM
         openmrs.ctc_visit_form
     WHERE
         ARVStatus = 'Not started ARV'
-            AND visitStartDate >= $P{start_date}
-            AND visitStartDate <= $P{end_date}
+            AND visitStartDate >=  $P{start_date}
+            AND visitStartDate <=  $P{end_date}
 			) AS tperiod]]>
 		</queryString>
 		<field name="indicator" class="java.lang.String"/>
@@ -2044,7 +2045,7 @@ FROM
     WHERE
         ARVStatus IN ('Stop')
             AND visitStartDate >= $P{start_date}
-            AND visitStartDate <= '#endDate#') AS tperiod 
+            AND visitStartDate <= $P{end_date}) AS tperiod 
 UNION ALL SELECT 
     'Transferred Out' AS 'indicator',
     COUNT(*) AS 'Total', 0 AS 'Pregnant', 0 AS 'BreastFeeding',
@@ -2118,15 +2119,19 @@ UNION ALL SELECT
                 0)),
             0) AS 'F,>=50 years'
 FROM
-    (SELECT DISTINCT
-        CTCID, AgeToDate, Gender, visitStartDate, FollowUpStatus
+    (  
+            SELECT DISTINCT
+        cvf.CTCID, cvf.AgeToDate, cvf.Gender, cvf.visitStartDate, crc.FollowUpStatus
     FROM
-        openmrs.ctc_visit_form
+        openmrs.ctc_visit_form cvf
+        join ctc_reg_card crc on crc.CTCID=cvf.CTCID
     WHERE
-        FollowUpStatus = 'TO - Transfer out'
+        (crc.FollowUpStatus = 'TO - Transfer out'
+            OR ARVStatus = 'Stop')
             AND visitStartDate >= $P{start_date}
             AND visitStartDate <= $P{end_date}
-			) AS tperiod 
+			
+            ) AS tperiod 
 
 UNION ALL SELECT 
     'Death' AS 'indicator',
@@ -2202,11 +2207,13 @@ UNION ALL SELECT
             0) AS 'F,>=50 years'
 FROM
     (SELECT DISTINCT
-        CTCID, AgeToDate, Gender, visitStartDate, FollowUpStatus
+        cvf.CTCID, cvf.AgeToDate, cvf.Gender, cvf.visitStartDate, crc.FollowUpStatus
     FROM
-        openmrs.ctc_visit_form
+        openmrs.ctc_visit_form cvf
+        join ctc_reg_card crc on crc.CTCID=cvf.CTCID
     WHERE
-        FollowUpStatus = 'Dead - Patient Died'
+        (crc.FollowUpStatus = 'Dead - Patient Died'
+            OR ARVStatus = 'Stop')
             AND visitStartDate >= $P{start_date}
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
@@ -2286,11 +2293,13 @@ UNION ALL SELECT
             0) AS 'F,>=50 years'
 FROM
     (SELECT DISTINCT
-        CTCID, AgeToDate, Gender, visitStartDate, FollowUpStatus
+        cvf.CTCID, cvf.AgeToDate, cvf.Gender, cvf.visitStartDate, crc.FollowUpStatus
     FROM
-        openmrs.ctc_visit_form
+        openmrs.ctc_visit_form cvf
+        join ctc_reg_card crc on crc.CTCID=cvf.CTCID
     WHERE
-        FollowUpStatus = 'LTF - Lost to Follow up'
+        (crc.FollowUpStatus ='LTF - Lost to Follow up' 
+            OR ARVStatus = 'Stop')
             AND visitStartDate >= $P{start_date}
             AND visitStartDate <= $P{end_date}
 			) AS tperiod 
@@ -2369,11 +2378,12 @@ UNION ALL SELECT
             0) AS 'F,>=50 years'
 FROM
     (SELECT DISTINCT
-        CTCID, AgeToDate, Gender, visitStartDate, FollowUpStatus
+        cvf.CTCID, cvf.AgeToDate, cvf.Gender, cvf.visitStartDate, crc.FollowUpStatus
     FROM
-        openmrs.ctc_visit_form
+        openmrs.ctc_visit_form cvf
+        join ctc_reg_card crc on crc.CTCID=cvf.CTCID
     WHERE
-        (FollowUpStatus IN ('LTF - Lost to Follow up' , 'Dead - Patient Died', 'TO - Transfer out')
+        (crc.FollowUpStatus IN ('LTF - Lost to Follow up' , 'Dead - Patient Died', 'TO - Transfer out')
             OR ARVStatus = 'Stop')
             AND visitStartDate >= $P{start_date}
             AND visitStartDate <= $P{end_date}

@@ -52,7 +52,8 @@
                  "RCH - FAMILY PLANNING",
                  "Vitals", "CTC2 Patient Record Form",
                  "RCH - HIV Exposed Infant Card",
-                 "RCH1 - Kadi ya klinic ya mtoto"],
+                 "RCH1 - Kadi ya klinic ya mtoto",
+                 "CTC2 Patient Record Form - POC ()"],
                 "translationKey": "DASHBOARD_TITLE_FORMS_DISPLAY_CONTROL_KEY"
             },
               
@@ -257,29 +258,14 @@
                 "displayOrder":2
             },
 
-
-            "observationGraph":{
-                "type":"observationGraph",
-                "hideEmptyDisplayControl": true,
-                "title":"Mapigo ya moyo wa mtoto (Grafu ya uchungu)",
-                "config":{
-                    "yAxisConcepts":[
-                        "Mapigo ya moyo wa mtoto"
-                    ],
-                    "xAxisConcept":"observationDateTime",
-                    "numberOfVisits":10
-                },
-                "displayOrder":3
-            },
-
             "majiYaChupa":{
                 "type":"observationGraph",
                 "hideEmptyDisplayControl": true,
                 "title":"Labor - Maji ya chupa (Liquor)",
                 "config":{
                     "yAxisConcepts":[
-                        "Labour - B. Bado kupasuka chupa(intact). S. Safi (clear). M. Meconium",
-                        "Labour - Kubonyea kichwa (Moulding) - Hakuna, + Wastani, ++ Sana"
+                        "Liquor",
+                        "Moudling"
                     ],
                     "xAxisConcept":"observationDateTime",
                     "numberOfVisits":10
@@ -336,6 +322,70 @@
                     }
                 },
                 "displayOrder":6
+            }
+        }
+    },
+  "Patograph":{
+        "translationKey":"Patograph",
+        "maxRecentlyViewedPatients":30,
+        "sections":{
+            "patientInformation":{
+                "translationKey":"DASHBOARD_TITLE_PATIENT_INFORMATION_KEY",
+                "type":"patientInformation",
+                "patientAttributes":[
+                    "education",
+                    "occupation"
+                ],
+                "addressFields":[
+                    "address1",
+                    "address2",
+                    "cityVillage",
+                    "countryDistrict"
+                ],
+                "displayOrder":0
+            },
+            "observationGraph":{
+                "type":"observationGraph",
+                "hideEmptyDisplayControl": true,
+                "title":"Fatal Heart Rate",
+                "config":{
+                    "yAxisConcepts":[
+                        "Fetal Heart Rate"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":60
+                },
+                "displayOrder":3
+            },
+             "grafuYaUchungu":{
+                "type":"observationGraph",
+                "hideEmptyDisplayControl": true,
+                "title":"Liquor, Moudling and Caput",
+                "config":{
+                    "yAxisConcepts":[
+                        "Liquor",
+                        "Moulding",
+                        "Caput"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":60
+                },
+                "displayOrder":5
+            },
+
+            "grafuYaUchungu":{
+                "type":"observationGraph",
+                "hideEmptyDisplayControl": true,
+                "title":"Cervix(cm) & Descent of Head (cm)",
+                "config":{
+                    "yAxisConcepts":[
+                        "ANC - Njia kufunguka (Cervix)",
+                        "ANC - Kichwa kuteremka (Descent)"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":60
+                },
+                "displayOrder":5
             }
         }
     },
